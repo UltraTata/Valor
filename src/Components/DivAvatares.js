@@ -3,15 +3,23 @@ import React from 'react';
 import { StyleSheet, Text, View, ScrollView, Image } from 'react-native';
 import avatar from "../img/avatar.png";
 
+const personajes = [
+    {nombre:"Abuelita", avatar:avatar},
+    {nombre:"Señorita", avatar:avatar},
+    {nombre:"Conan", avatar:avatar},
+    {nombre:"Don Alexios", avatar:avatar}
+];
+
 export default function DivAvatares() {
     return (
         <View style={styles.div}>
-            <Text style={{margin:"3%",align:"center"}}>Personajes</Text>
+            <Text style={{margin:"3%",textAlign: 'center'}}>Personajes</Text>
             <View style={{flexDirection:"row"}}>
-                <Image style={styles.avatar} source={avatar}/>
-                <Image style={styles.avatar} source={avatar}/>
-                <Image style={styles.avatar} source={avatar}/>
-                <Image style={styles.avatar} source={avatar}/>
+                {
+                    personajes.map(
+                        (personaje) => <View style={styles.avatarCont}><Image style={styles.avatar} source={personaje.avatar}/><Text style={styles.avatarText}>{personaje.nombre}</Text></View>
+                    )
+                }
             </View>
         </View>
     );
@@ -21,16 +29,18 @@ const styles = StyleSheet.create({
     div: {
         backgroundColor: "#98DBC6",
         borderRadius: 8,
-        width:"91%",
-        height:"18%",
-        position: "absolute",
-        start: "3%",
-        paddingBottom:"3%",
-        top: "24%"
+        width:"94%",
+        margin: "3%"
+    },
+    avatarCont: {
+        width: "19%",
+        margin: "3%"
     },
     avatar: {
-        width: "19%",
-        aspectRatio: 1,
-        margin: "3%"
+        width: "100%",
+        aspectRatio: 1
+    },
+    avatarText: {
+        textAlign: "center"
     }
 });

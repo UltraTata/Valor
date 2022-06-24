@@ -21,30 +21,18 @@ return (
 }
 
 const styles = StyleSheet.create({
-    container: {
-        width: "100%",
-        height: "100%",
-        flexDirection:'row'
-    },
     textCont: {
         backgroundColor: '#fff',
-        alignItems: 'end',
+        alignItems: 'center',
         justifyContent: 'center',
         borderWidth: 2,
         padding: 10,
-        width:"80%",
-        height:"17%",
-        position: "absolute",
-        start: "17%",
-        top: "6%"
+        height:"100%",
+        marginStart: "3%",
+        marginTop: "6%"
     },
-    backButton: {
-        backgroundColor: "#9DDCE0",
-        borderRadius: 8,
-        width:43,
-        height:43,
-        position: "absolute",
-        start: "3%",
-        top: "7%"
+    text:{
+        color: "black",
+        textAlign: 'center',
     }
 });
