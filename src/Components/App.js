@@ -10,7 +10,7 @@ import Cuestionario from './Cuestionario.js';
 export default function App() {
   return (
     <View accessibilityRole="text" style={styles.container}>
-      <View style={{flex:1,flexDirection: "row",maxHeight:"17%",marginBottom:"3%"}}>
+      <View style={styles.header}>
         <BackButton></BackButton>
         <IntroTexto></IntroTexto>
       </View>
@@ -25,6 +25,13 @@ export default function App() {
 }
 
 const styles = StyleSheet.create({
+  header: {
+    flex:1,
+    flexDirection: "row",
+    maxHeight:"17%",
+    marginBottom:"3%",
+    justifyContent: "space-between"
+  },
   container: {
     flex: 1,
     backgroundColor: '#fff'

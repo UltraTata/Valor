@@ -23,16 +23,14 @@ return (
 const styles = StyleSheet.create({
     textCont: {
         backgroundColor: '#fff',
-        alignItems: 'center',
-        justifyContent: 'center',
         borderWidth: 2,
-        padding: 10,
+        padding: "1%",
         height:"100%",
-        marginStart: "3%",
-        marginTop: "6%"
+        margin: "3%",
+        marginTop: "6%",
+        flexDirection: 'row', justifyContent: 'center', alignItems: 'center'
     },
     text:{
-        color: "black",
-        textAlign: 'center',
+        color: "black"
     }
 });

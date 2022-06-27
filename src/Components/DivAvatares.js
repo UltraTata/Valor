@@ -1,13 +1,13 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View, ScrollView, Image } from 'react-native';
-import avatar from "../img/avatar.png";
+import {fotosDePerfil} from "../img/cargarImg.js";
 
 const personajes = [
-    {nombre:"Abuelita", avatar:avatar},
-    {nombre:"Señorita", avatar:avatar},
-    {nombre:"Conan", avatar:avatar},
-    {nombre:"Don Alexios", avatar:avatar}
+    {nombre:"Abuelita", avatar:fotosDePerfil.abuela},
+    {nombre:"Trixie", avatar:fotosDePerfil.trixie},
+    {nombre:"Conan", avatar:fotosDePerfil.conan},
+    {nombre:"Alexios I Komnenos", avatar:fotosDePerfil.alexios}
 ];
 
 export default function DivAvatares() {
