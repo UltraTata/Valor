@@ -38,9 +38,7 @@ export default function IntroTexto() {
 
 const styles = StyleSheet.create({
     container:{
-        width:"11%",
-        marginStart: "3%",
-        marginTop: "6%"
+        width:"11%"
     },
     button: {
         backgroundColor: "#9DDCE0",

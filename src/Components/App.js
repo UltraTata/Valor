@@ -26,11 +26,12 @@ export default function App() {
 
 const styles = StyleSheet.create({
   header: {
-    flex:1,
     flexDirection: "row",
-    maxHeight:"17%",
-    marginBottom:"3%",
-    justifyContent: "space-between"
+    width: "94%",
+    maxHeight: "17%",
+    justifyContent: "space-between",
+    margin: "3%",
+    marginTop: "6%"
   },
   container: {
     flex: 1,

@@ -18,6 +18,9 @@ export default function Cuestionario() {
                     (pregunta) => <Pregunta pregunta={pregunta}></Pregunta>
                 )
             }
+            <View style={{alignItems: "center"}}>
+                <Text style={styles.button}>¡Listo!</Text>
+            </View>
         </View>
     );
 }
@@ -31,5 +34,15 @@ const styles = StyleSheet.create({
         marginTop: "1%",
         paddingTop: "1%",
         paddingBottom: "1%"
+    },
+    button: {
+        backgroundColor: "#fdcfdc",
+        borderRadius: 8,
+        textAlign: "center",
+        display: "inline",
+        fontSize: "20px",
+        fontWeight: "bold",
+        padding: "0.5%",
+        width: "30%"
     }
 });
