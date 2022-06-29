@@ -1,4 +1,4 @@
-package com.prnpp;
+package com.valor;
 
 import android.os.Build;
 import android.os.Bundle;
