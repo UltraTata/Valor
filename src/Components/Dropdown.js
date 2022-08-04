@@ -1,6 +1,8 @@
 import { StatusBar } from 'expo-status-bar';
-import {React, useState} from 'react';
+import {React, useContext, useState} from 'react';
 import { StyleSheet, Text, View, ScrollView, Image } from 'react-native';
+import { PreguntasContext } from '../Context/PreguntasContext';
+import cuestionarioJSON from "../JSON/Cuestionario.json";
 
 function R(props){
     const changeRSp = function(){
@@ -18,18 +20,19 @@ function R(props){
 }
 
 export default function Dropdown(props){
-    const changeR = function(r){
-        props.pregunta.seleccion = r;
-        props.f(-1);
+    const {dropdown, respuestas, modificarRespuesta, displayOrHide} = useContext(PreguntasContext);
+    const changeR = function(v){
+        modificarRespuesta(dropdown,v);
+        displayOrHide(-1);
     }
     return (
         <View style={styles.dropdown}>
             {
-                props.pregunta.respuestas.map(
-                    (respuesta) =>
+                cuestionarioJSON[dropdown].respuestas.map(
+                    (respuesta,iter) =>
                         <R
-                            i = {props.pregunta.respuestas.indexOf(respuesta)}
-                            s = {props.pregunta.seleccion}
+                            i = {iter}
+                            s = {respuestas[dropdown]}
                             r = {respuesta}
                             f = {changeR}
                         ></R>

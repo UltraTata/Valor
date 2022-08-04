@@ -5,22 +5,25 @@ import IntroTexto from './IntroTexto.js';
 import DivAvatares from './DivAvatares.js';
 import BackButton from './BackButton.js';
 import Cuestionario from './Cuestionario.js';
+import {PreguntasProvider} from "../Context/PreguntasContext.js";
 
 
 export default function App() {
   return (
-    <View accessibilityRole="text" style={styles.container}>
-      <View style={styles.header}>
-        <BackButton></BackButton>
-        <IntroTexto></IntroTexto>
+    <PreguntasProvider>
+      <View accessibilityRole="text" style={styles.container}>
+        <View style={styles.header}>
+          <BackButton></BackButton>
+          <IntroTexto></IntroTexto>
+        </View>
+        <br></br>
+        <DivAvatares></DivAvatares>
+        <br></br>
+        <Text style={styles.porFavor}>Por favor, responda estas preguntas:</Text>
+        <Cuestionario></Cuestionario>
+        <StatusBar style="auto" />
       </View>
-      <br></br>
-      <DivAvatares></DivAvatares>
-      <br></br>
-      <Text style={styles.porFavor}>Por favor, responda estas preguntas:</Text>
-      <Cuestionario></Cuestionario>
-      <StatusBar style="auto" />
-    </View>
+    </PreguntasProvider>
   );
 }
 

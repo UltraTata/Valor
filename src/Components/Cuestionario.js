@@ -1,34 +1,26 @@
 import { StatusBar } from 'expo-status-bar';
-import {React, useState} from 'react';
+import {React, useContext} from 'react';
 import { StyleSheet, Text, View, ScrollView, Image } from 'react-native';
 import Pregunta from "./Pregunta.js";
 import Dropdown from "./Dropdown.js";
-import preguntas from "../JSON/Cuestionario.json";
+import cuestionarioJSON from "../JSON/Cuestionario.json";
+import { PreguntasContext } from '../Context/PreguntasContext.js';
 
 export default function Cuestionario() {
-    const [dropdown, setDropdown] = useState(-1);
-    const displayOrHide = function(i){
-        if(dropdown == -1){
-            setDropdown(i);
-        }else{
-            setDropdown(-1);
-        }
-    }
+    const {respuestas, dropdown} = useContext(PreguntasContext);
     return (
         <View style={styles.div}>
             {
-                preguntas.map(
-                    (pregunta) => <Pregunta 
-                        pregunta={pregunta} 
-                        index={preguntas.indexOf(pregunta)} 
-                        f={displayOrHide}></Pregunta>
+                cuestionarioJSON.map(
+                    (pregunta,i) => <Pregunta 
+                        i={i}></Pregunta>
                 )
             }
             <View style={{alignItems: "center"}}>
                 <Text style={styles.button}>¡Listo!</Text>
             </View>
             {
-                dropdown > -1 ? <Dropdown pregunta={preguntas[dropdown]} f={displayOrHide}></Dropdown> : <></>
+                dropdown > -1 ? <Dropdown></Dropdown> : <></>
             }
         </View>
     );
