@@ -1,14 +1,16 @@
 import { StatusBar } from 'expo-status-bar';
-import React from 'react';
+import React, { useContext } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import IntroTexto from './IntroTexto.js';
 import DivAvatares from './DivAvatares.js';
 import BackButton from './BackButton.js';
 import Cuestionario from './Cuestionario.js';
-import {PreguntasProvider} from "../Context/PreguntasContext.js";
+import Dropdown from "./Dropdown.js";
+import {PreguntasContext, PreguntasProvider} from "../Context/PreguntasContext.js";
 
 
 export default function App() {
+  //const {dropdown} = useContext(PreguntasContext);
   return (
     <PreguntasProvider>
       <View accessibilityRole="text" style={styles.container}>
@@ -23,7 +25,15 @@ export default function App() {
         <Cuestionario></Cuestionario>
         <StatusBar style="auto" />
       </View>
+      <CondDropdown></CondDropdown>
     </PreguntasProvider>
+  );
+}
+
+function CondDropdown(){
+  const {dropdown} = useContext(PreguntasContext);
+  return (
+    <>{dropdown > -1 ? <Dropdown></Dropdown> : <></>}</>
   );
 }
 

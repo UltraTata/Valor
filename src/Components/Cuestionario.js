@@ -19,9 +19,6 @@ export default function Cuestionario() {
             <View style={{alignItems: "center"}}>
                 <Text style={styles.button}>¡Listo!</Text>
             </View>
-            {
-                dropdown > -1 ? <Dropdown></Dropdown> : <></>
-            }
         </View>
     );
 }
