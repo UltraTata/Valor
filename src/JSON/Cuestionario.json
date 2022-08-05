@@ -1,17 +1,12 @@
 [
     {"pregunta": "¿Introvertido o extrovertido?",
-        "respuestas": ["Muy introvertido", "Introvertido", "Extrovertido", "Muy extrovertido"],
-        "seleccion": 0},
+        "respuestas": ["Muy introvertido", "Introvertido", "Extrovertido", "Muy extrovertido"]},
     {"pregunta": "¿Observador o intuitivo?",
-        "respuestas": ["Muy observador", "Observador", "Intuitivo", "Muy intuitivo"],
-        "seleccion": 0},
+        "respuestas": ["Muy observador", "Observador", "Intuitivo", "Muy intuitivo"]},
     {"pregunta": "¿Pensador o emocional?",
-        "respuestas": ["Muy pensador", "Pensador", "Emocional", "Muy emocional"],
-        "seleccion": 0},
+        "respuestas": ["Muy pensador", "Pensador", "Emocional", "Muy emocional"]},
     {"pregunta": "¿Juicioso o perceptivo?",
-        "respuestas": ["Muy juicioso", "Juicioso", "Perceptivo", "Muy perceptivo"],
-        "seleccion": 0},
+        "respuestas": ["Muy juicioso", "Juicioso", "Perceptivo", "Muy perceptivo"]},
     {"pregunta": "¿Asertivo o turbulento?",
-        "respuestas": ["Muy asertivo", "Asertivo", "Turbulento", "Muy turbulento"],
-        "seleccion": 0}
+        "respuestas": ["Muy asertivo", "Asertivo", "Turbulento", "Muy turbulento"]}
 ]
