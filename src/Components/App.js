@@ -2,8 +2,9 @@ import React, { useContext } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import Dropdown from "./Dropdown.js";
 import {PreguntasContext, PreguntasProvider} from "../Context/PreguntasContext.js";
-import { NativeRouter, Routes, Route, Link } from "react-router-native";
+import { NativeRouter, Routes, Route } from "react-router-native";
 import PantallaCuestionario from './PantallaCuestionario.js';
+import PantallaDeEstado from './PantallaDeEstado.js';
 
 
 export default function App() {
@@ -11,7 +12,8 @@ export default function App() {
     <PreguntasProvider>
       <NativeRouter>
         <Routes>
-          <Route path="/" component={PantallaCuestionario} />
+          <Route path="/" element={<PantallaCuestionario/>} />
+          <Route path="/estado" element={<PantallaDeEstado/>} />
         </Routes>
       </NativeRouter>
       <CondDropdown></CondDropdown>
