@@ -6,7 +6,7 @@ import Dropdown from "./Dropdown.js";
 import cuestionarioJSON from "../JSON/Cuestionario.json";
 import { PreguntasContext } from '../Context/PreguntasContext.js';
 
-export default function Cuestionario() {
+export default function Cuestionario(navigation) {
     const {respuestas, dropdown} = useContext(PreguntasContext);
     return (
         <View style={styles.div}>
@@ -17,7 +17,10 @@ export default function Cuestionario() {
                 )
             }
             <View style={{alignItems: "center"}}>
-                <Text style={styles.button}>¡Listo!</Text>
+                <Text 
+                    style={styles.button}
+                    onClick={() => navigation.navigate("PantallaEstado")}
+                >¡Listo!</Text>
             </View>
         </View>
     );
