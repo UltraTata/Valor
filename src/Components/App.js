@@ -1,4 +1,4 @@
-import React from 'react';
+import {React, useContext} from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Dropdown from "./Dropdown.js";
@@ -6,8 +6,10 @@ import PantallaCuestionario from "./PantallaCuestionario.js";
 import PantallaEstado from "./PantallaEstado.js";
 import {PreguntasContext, PreguntasProvider} from "../Context/PreguntasContext.js";
 
+const Stack = createNativeStackNavigator();
 
 export default function App() {
+  
   return (
     <PreguntasProvider>
       <NavigationContainer>

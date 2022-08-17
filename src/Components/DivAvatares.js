@@ -2,13 +2,7 @@ import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View, ScrollView, Image } from 'react-native';
 import {fotosDePerfil} from "../img/cargarImg.js";
-
-const personajes = [
-    {nombre:"Abuelita", avatar:fotosDePerfil.abuela},
-    {nombre:"Trixie", avatar:fotosDePerfil.trixie},
-    {nombre:"Conan", avatar:fotosDePerfil.conan},
-    {nombre:"Alexios I Komnenos", avatar:fotosDePerfil.alexios}
-];
+import personajes from "../JSON/Personajes.json";
 
 export default function DivAvatares() {
     return (
@@ -17,7 +11,7 @@ export default function DivAvatares() {
             <View style={{flexDirection:"row"}}>
                 {
                     personajes.map(
-                        (personaje) => <View style={styles.avatarCont}><Image style={styles.avatar} source={personaje.avatar}/><Text style={styles.avatarText}>{personaje.nombre}</Text></View>
+                        (personaje) => <View style={styles.avatarCont}><Image style={styles.avatar} source={fotosDePerfil[personaje.img]}/><Text style={styles.avatarText}>{personaje.nombre}</Text></View>
                     )
                 }
             </View>
