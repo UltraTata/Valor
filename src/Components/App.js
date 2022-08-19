@@ -6,6 +6,7 @@ import PantallaCuestionario from "./PantallaCuestionario.js";
 import PantallaEstado from "./PantallaEstado.js";
 import {PreguntasContext, PreguntasProvider} from "../Context/PreguntasContext.js";
 import PantallaElegirPersonaje from './PantallaElegirPersonaje.js';
+import { TalkProvider } from '../Context/TalkContext.js';
 
 const Stack = createNativeStackNavigator();
 
@@ -13,14 +14,16 @@ export default function App() {
   
   return (
     <PreguntasProvider>
-      <NavigationContainer>
-        <Stack.Navigator initialRouteName="Cuestionario">
-          <Stack.Screen name="Cuestionario" component={PantallaCuestionario} />
-          <Stack.Screen name="Estado" component={PantallaEstado} />
-          <Stack.Screen name="Elegir personaje" component={PantallaElegirPersonaje} />
-        </Stack.Navigator>
-      </NavigationContainer>
-      <CondDropdown/>
+      <TalkProvider>
+        <NavigationContainer>
+          <Stack.Navigator initialRouteName="Cuestionario">
+            <Stack.Screen name="Cuestionario" component={PantallaCuestionario} />
+            <Stack.Screen name="Estado" component={PantallaEstado} />
+            <Stack.Screen name="Elegir personaje" component={PantallaElegirPersonaje} />
+          </Stack.Navigator>
+        </NavigationContainer>
+        <CondDropdown/>
+      </TalkProvider>
     </PreguntasProvider>
   );
 }

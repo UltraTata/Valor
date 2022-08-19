@@ -18,7 +18,6 @@ export function TalkProvider(props){
         newHistorial.slice(historial.length-1,1);
         setHistorial(newHistorial);
     }
-
     return (<TalkContext.Provider
         value={{
             personaje,

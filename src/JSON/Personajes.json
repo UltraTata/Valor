@@ -1,18 +1,22 @@
 [
     {
         "nombre": "Abuelita",
-        "img": "abuela"
+        "img": "abuela",
+        "desc": "señora mayor"
     },
     {
         "nombre": "Trixie",
-        "img": "trixie"
+        "img": "trixie",
+        "desc": "muchacha bella"
     },
     {
         "nombre": "Conan",
-        "img": "conan"
+        "img": "conan",
+        "desc": "joven energetico"
     },
     {
         "nombre": "Alexios I Komnenos",
-        "img": "alexios"
+        "img": "alexios",
+        "desc": "sabio de la montaña"
     }
 ]
