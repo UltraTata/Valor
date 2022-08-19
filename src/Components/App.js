@@ -5,6 +5,7 @@ import Dropdown from "./Dropdown.js";
 import PantallaCuestionario from "./PantallaCuestionario.js";
 import PantallaEstado from "./PantallaEstado.js";
 import {PreguntasContext, PreguntasProvider} from "../Context/PreguntasContext.js";
+import PantallaElegirPersonaje from './PantallaElegirPersonaje.js';
 
 const Stack = createNativeStackNavigator();
 
@@ -16,9 +17,10 @@ export default function App() {
         <Stack.Navigator initialRouteName="Cuestionario">
           <Stack.Screen name="Cuestionario" component={PantallaCuestionario} />
           <Stack.Screen name="Estado" component={PantallaEstado} />
+          <Stack.Screen name="Elegir personaje" component={PantallaElegirPersonaje} />
         </Stack.Navigator>
       </NavigationContainer>
-      <CondDropdown></CondDropdown>
+      <CondDropdown/>
     </PreguntasProvider>
   );
 }

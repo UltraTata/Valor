@@ -1,46 +1,40 @@
-import { StatusBar } from 'expo-status-bar';
-import React, { useContext } from 'react';
-import { StyleSheet, Text, View, Image } from 'react-native';
-import IntroTexto from './IntroTexto.js';
-import DivAvatares from './DivAvatares.js';
-import BackButton from './BackButton.js';
+import React from 'react';
+import { Text, View, Image } from 'react-native';
 import Cuestionario from './Cuestionario.js';
-import Dropdown from "./Dropdown.js";
-import {PreguntasContext, PreguntasProvider} from "../Context/PreguntasContext.js";
+import {PreguntasContext} from "../Context/PreguntasContext.js";
 import { fotosDePerfil } from '../img/cargarImg.js';
+import SvgButton from './SvgButton.js';
 
-export default function PantallaEstado({navigation}) {
+export default function PantallaEstado(params) {
   return (
     <View accessibilityRole="text" style={styles.container}>
-      <Image style={{width:20,height:20}} source={fotosDePerfil["avatar"]}/>
-      <Image style={{width:20,height:20}} source={fotosDePerfil["conan"]}/>
+      <Image style={styles.img("50%")} source={fotosDePerfil["logo"]}/>
+      <View style={styles.littleDiv}>
+        <Image style={styles.img("75%")} source={fotosDePerfil["conan"]}/>
+        <SvgButton size="25%" margin="3%" onClick={() => params.navigation.navigate("Elegir personaje")}>
+          M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z
+        </SvgButton>
+      </View>
       <Cuestionario navigation={navigation}></Cuestionario>
-      <StatusBar style="auto"/>
     </View>
   );
 }
 
-function CondDropdown(){
-  const {dropdown} = useContext(PreguntasContext);
-  return (
-    <>{dropdown > -1 ? <Dropdown></Dropdown> : <></>}</>
-  );
-}
-
-const styles = StyleSheet.create({
-  header: {
-    flexDirection: "row",
-    width: "94%",
-    maxHeight: "17%",
-    justifyContent: "space-between",
-    margin: "3%",
-    marginTop: "6%"
-  },
+const styles = {
   container: {
     flex: 1,
-    backgroundColor: '#fff'
+    backgroundColor: '#fff',
+    alignItems: "center"
   },
-  porFavor: {
-    marginStart:"3%"
-  }
-});
+  littleDiv: {
+    width: "50%",
+    margin: "3%",
+    justifyContent: "center",
+    flexDirection: "row"
+  },
+  img: (size) => {return {
+    width: size,
+    aspectRatio: 1,
+    margin: "3%"
+  }}
+};
