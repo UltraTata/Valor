@@ -8,13 +8,13 @@ export function TalkProvider(props){
     const [historial, setHistorial] = useState([]);
 
     const addHistorial = (x) => {
-        let newHistorial = historial;
+        let newHistorial = cloneArray(historial);
         newHistorial.push(x);
         setHistorial(newHistorial);
     }
 
     const deleteLast = () => {
-        let newHistorial = historial;
+        let newHistorial =  cloneArray(historial);
         newHistorial.slice(historial.length-1,1);
         setHistorial(newHistorial);
     }
