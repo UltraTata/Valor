@@ -1,43 +1,44 @@
 import {React, useContext} from 'react';
-import { StyleSheet, Text, View, ScrollView, Image } from 'react-native';
-import Pregunta from "./Pregunta.js";
+import { StyleSheet, Text, View, } from 'react-native';
 import TextButton from './TextButton.js';
-import cuestionarioJSON from "../JSON/Cuestionario.json";
+import sucesosJSON from "../JSON/Sucesos.json";
 import { PreguntasContext } from '../Context/PreguntasContext.js';
 
 export default function Sucesos(params) {
     const {respuestas, dropdown} = useContext(PreguntasContext);
     return (
-        <View style={styles.div}>
-            {
-                cuestionarioJSON.map(
-                    (pregunta,i) => <Pregunta 
-                        i={i}></Pregunta>
-                )
-            }
-            <View style={{alignItems:"center"}}>
-                    <TextButton 
-                    color="#fdcfdc"
-                    style={styles.textButton}
-                    onClick={() => params.navigation.navigate("Estado")}
-                > ¡Listo! </TextButton>
+        <View style={styles.containter}>
+            <Text style={styles.title}>¿Que paso? ¡Cuéntanos!</Text>
+            <View style={styles.sucesoDiv}>
+                {
+                    sucesosJSON.map(
+                        (suceso) => <View style={{margin:"1%"}}><TextButton color="#E6D72A">{suceso.nombre}</TextButton></View>
+                    )
+                }
             </View>
         </View>
     );
 }
 
 const styles = StyleSheet.create({
-    div: {
+    title: {
+        fontSize: "20px",
+        fontWeight: "bold",
+        textAlign: "center"
+    },
+    containter: {
         backgroundColor: "#98DBC6",
         borderRadius: 8,
         width:"94%",
         marginStart: "3%",
         marginTop: "1%",
-        paddingTop: "1%",
-        paddingBottom: "1%"
+        padding: "3%"
     },
-    textButton: {
-        fontSize: "20px",
-        fontWeight: "bold"
+    sucesoDiv: {
+        justifyContent: "space-evenly",
+        flexWrap: 'wrap',
+        flex: 1,
+        flexDirection: "row",
+        margin:"3%"
     }
 });

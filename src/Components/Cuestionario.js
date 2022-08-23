@@ -1,5 +1,5 @@
 import {React, useContext} from 'react';
-import { StyleSheet, Text, View, ScrollView, Image } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 import Pregunta from "./Pregunta.js";
 import TextButton from './TextButton.js';
 import cuestionarioJSON from "../JSON/Cuestionario.json";
