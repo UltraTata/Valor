@@ -1,6 +1,6 @@
 import React from 'react';
 import { View } from 'react-native';
-import {Svg, Text, Path} from 'react-native-svg';
+import {Svg, Path} from 'react-native-svg';
 
 export default function SvgButton(params) {
     return (
@@ -11,18 +11,6 @@ export default function SvgButton(params) {
                     style={styles.path(params.fill == undefined ? "#000000" : params.fill)}
                     fillRule={params.fillRule == undefined ? "evenodd" : params.fillRule} 
                     d={params.path == undefined ? params.children : params.path}></Path>
-                    {
-                        params.text == undefined ?
-                        <></>
-                        :
-                        <Text 
-                            stroke={params.fill == undefined ? "#000000" : params.fill}
-                            fontSize="16"
-                            x={8}
-                            y={10}
-                            textAnchor="middle"
-                        >{params.text}</Text>
-                    }
                 </Svg>
             </View>
         </View>

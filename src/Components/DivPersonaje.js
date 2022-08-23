@@ -1,7 +1,7 @@
 import {React, useContext} from 'react';
-import { StyleSheet, Text, View, ScrollView, Image } from 'react-native';
+import { Text, View, Image } from 'react-native';
 import {fotosDePerfil} from "../img/cargarImg.js";
-import SvgButton from './SvgButton.js';
+import TextButton from './TextButton.js';
 import { TalkContext } from '../Context/TalkContext.js';
 
 export default function DivPersonaje(params) {
@@ -15,10 +15,10 @@ export default function DivPersonaje(params) {
         <View style={styles.div}>
             <View style={{flexDirection: "row", width:"100%"}}>
                 <Image style={styles.avatar} source={fotosDePerfil[params.personaje.img]}/>
-                <View style={styles.desc}>
+                <View style={{marginStart: "3%"}}>
                     <Text style={styles.title}>{params.personaje.nombre}</Text>
                     <Text style={{marginBottom:"1%"}}>{params.personaje.desc}</Text>
-                    <SvgButton onClick={elegir} text="Elegir" color="#fdcfdc" viewBox="0 -4 16 20" size="40%" aspectRatio={3}/>
+                    <TextButton onClick={elegir} color="#fdcfdc">Elegir</TextButton>
                 </View>
             </View>
         </View>
@@ -41,9 +41,5 @@ const styles = {
         fontWeight: "bold",
         fontSize: "125%",
         marginBottom: "1%"
-    },
-    desc: {
-        width: "50%",
-        marginStart: "3%"
     }
 }
