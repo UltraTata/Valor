@@ -31,7 +31,7 @@ export default function Pregunta(params) {
     );
 }
 
-const styles = StyleSheet.create({
+const styles = {
     div: {
         backgroundColor: "#98DBC6",
         borderRadius: 8,
@@ -60,4 +60,4 @@ const styles = StyleSheet.create({
         height: 16,
         aspectRatio: 1
     }
-});
+};

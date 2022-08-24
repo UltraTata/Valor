@@ -1,5 +1,7 @@
 [
-    {"nombre":"Fuimos al cine"},
-    {"nombre":"Fuimos a la plaza"},
-    {"nombre":"Fuimos al restaurante"}
+    {"nombre":"Conocía a una chica que me gusta", "efectos":["conocer"], "si":["varon"], "no":["conocer"]},
+    {"nombre":"Conocía a un chico que me gusta", "efectos":["conocer"], "si":["mujer"], "no":["conocer"]},
+    {"nombre":"Fuimos al cine", "efectos":["cine 1","salida 1"], "si": ["conocer","hablar","invitar 1"]},
+    {"nombre":"Fuimos a la plaza", "efectos":["plaza 1","salida 1"], "si": ["conocer","hablar","invitar 1"]},
+    {"nombre":"Fuimos al restaurante", "efectos":["restaurante 1","salida 1"], "si": ["conocer","hablar","invitar 1"]}
 ]
