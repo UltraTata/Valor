@@ -12,7 +12,7 @@ export default function Pregunta(params) {
         <View onClick={displayDropdown} style={styles.div}>
             <Text style={styles.question}>{pregunta}</Text>
             <View style={styles.boxSizer}>
-                    <Text style={styles.answer}>{respuestas[params.i] == -1 ? undefinedAnswer : cuestionarioJSON[params.i].respuestas[respuestas[params.i]]}</Text>
+                    <Text style={styles.answer}>{respuestas[params.i] == -1 ? undefinedAnswer : cuestionarioJSON[params.i].respuestas[respuestas[params.i]].respuesta}</Text>
                 <View style={styles.answerDiv}>
                     {dropdown == params.i ? 
                     <Svg viewBox="0 0 16 16" style={styles.svg} fill="black">

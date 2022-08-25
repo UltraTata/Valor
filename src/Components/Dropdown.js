@@ -1,5 +1,4 @@
-import { StatusBar } from 'expo-status-bar';
-import {React, useContext, useState} from 'react';
+import {React, useContext} from 'react';
 import { StyleSheet, Text, View, ScrollView, Image } from 'react-native';
 import { PreguntasContext } from '../Context/PreguntasContext';
 import cuestionarioJSON from "../JSON/Cuestionario.json";
@@ -50,7 +49,7 @@ export default function Dropdown(props){
                         <R
                             i = {iter}
                             s = {respuestas[dropdown]}
-                            r = {respuesta}
+                            r = {respuesta.respuesta}
                             f = {changeR}
                         ></R>
                 )

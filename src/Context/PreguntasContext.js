@@ -33,7 +33,8 @@ export function PreguntasProvider(props){
             setRespuestas,
             dropdown,
             displayOrHide,
-            modificarRespuesta
+            modificarRespuesta,
+            undefinedAnswer
         }}>
             {props.children}
         </PreguntasContext.Provider>);

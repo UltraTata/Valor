@@ -12,7 +12,7 @@ export function TalkProvider(props){
     const addHistorial = (x) => {
         let newHistorial = cloneArray(historial);
         newHistorial.push(x);
-        setHistorial(newHistorial);
+        setHistorial(historial);
     }
 
     const deleteLast = () => {

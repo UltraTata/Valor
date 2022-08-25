@@ -10,9 +10,11 @@ export default function Cuestionario(params) {
     const {respuestas} = useContext(PreguntasContext);
     const {addHistorial} = useContext(TalkContext);
     const listo = () => {
-        respuestas.map(
-            (respuesta) => {
-                addHistorial(respuesta);
+        cuestionarioJSON.map(
+            (pregunta, i) => {
+                if(respuestas[i] > -1){
+                    addHistorial(pregunta.respuestas[respuestas[i]]);
+                }
             }
         );
         params.navigation.navigate("Estado");
