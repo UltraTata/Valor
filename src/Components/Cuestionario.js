@@ -3,10 +3,20 @@ import { StyleSheet, View } from 'react-native';
 import Pregunta from "./Pregunta.js";
 import TextButton from './TextButton.js';
 import cuestionarioJSON from "../JSON/Cuestionario.json";
+import { TalkContext } from '../Context/TalkContext.js';
 import { PreguntasContext } from '../Context/PreguntasContext.js';
 
 export default function Cuestionario(params) {
-    const {respuestas, dropdown} = useContext(PreguntasContext);
+    const {respuestas} = useContext(PreguntasContext);
+    const {addHistorial} = useContext(TalkContext);
+    const listo = () => {
+        respuestas.map(
+            (respuesta) => {
+                addHistorial(respuesta);
+            }
+        );
+        params.navigation.navigate("Estado");
+    }
     return (
         <View style={styles.div}>
             {
@@ -16,11 +26,11 @@ export default function Cuestionario(params) {
                 )
             }
             <View style={{alignItems:"center"}}>
-                    <TextButton 
+                <TextButton 
                     color="#fdcfdc"
                     style={styles.textButton}
-                    onClick={() => params.navigation.navigate("Estado")}
-                > ¡Listo! </TextButton>
+                    onClick={listo}
+                >¡Listo!</TextButton>
             </View>
         </View>
     );

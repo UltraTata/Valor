@@ -1,5 +1,6 @@
 import {createContext, React, useState} from 'react';
 import cuestionarioJSON from "../JSON/Cuestionario.json";
+import cloneArray from "./cloneArray.js";
 
 export const PreguntasContext = createContext();
 
@@ -22,7 +23,7 @@ export function PreguntasProvider(props){
     const [respuestas, setRespuestas] = useState(w);
 
     const modificarRespuesta = function(i,v){
-        let w = respuestas;
+        let w = cloneArray(respuestas);
         w[i] = v;
         setRespuestas(w);
     }

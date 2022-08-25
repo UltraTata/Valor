@@ -1,6 +1,7 @@
 import {createContext, React, useState} from 'react';
 import personajesJSON from "../JSON/Personajes.json";
 import sucesosJSON from "../JSON/Sucesos.json";
+import cloneArray from "./cloneArray.js";
 
 export const TalkContext = createContext();
 

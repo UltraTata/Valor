@@ -1,17 +1,46 @@
 [
-    {"pregunta": "¿Introvertido o extrovertido?",
-        "respuestas": ["Muy introvertido", "Introvertido", "Extrovertido", "Muy extrovertido"],
-        "seleccion": 0},
-    {"pregunta": "¿Observador o intuitivo?",
-        "respuestas": ["Muy observador", "Observador", "Intuitivo", "Muy intuitivo"],
-        "seleccion": 0},
-    {"pregunta": "¿Pensador o emocional?",
-        "respuestas": ["Muy pensador", "Pensador", "Emocional", "Muy emocional"],
-        "seleccion": 0},
-    {"pregunta": "¿Juicioso o perceptivo?",
-        "respuestas": ["Muy juicioso", "Juicioso", "Perceptivo", "Muy perceptivo"],
-        "seleccion": 0},
-    {"pregunta": "¿Asertivo o turbulento?",
-        "respuestas": ["Muy asertivo", "Asertivo", "Turbulento", "Muy turbulento"],
-        "seleccion": 0}
+    {"pregunta": "¿Mujer o varón?",
+        "respuestas": [
+            {
+                "respuesta": "Mujer",
+                "efectos": ["mujer"]
+            }, 
+            {
+                "respuesta": "Varón",
+                "efectos": ["varon"]
+            }
+        ]
+    },
+    {"pregunta": "¿Como socializás?",
+        "respuestas": [
+            {
+                "respuesta": "Voy a lugares comunes como bares, boliches, etc.",
+                "efectos": ["mainstream"]
+            }, 
+            {
+                "respuesta": "Prefiero el aire libre",
+                "efectos": ["nature-friendly"]
+            }, 
+            {
+                "respuesta": "¿Socializar?",
+                "efectos": ["introvertido"]
+            }
+        ]
+    },
+    {"pregunta": "¿Ya conoces a la \"personita especial\"?",
+        "respuestas": [
+            {
+                "respuesta": "Si, quiero saber como hablarle 👉👈",
+                "efectos": ["conocer"]
+            }, 
+            {
+                "respuesta": "Si, UwU",
+                "efectos": ["conocer","hablar"]
+            },
+            {
+                "respuesta": "No, a eso vine",
+                "efectos": []
+            }
+        ]
+    }
 ]

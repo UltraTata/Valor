@@ -1,7 +1,5 @@
 import React from 'react';
 import { Text, View, Image } from 'react-native';
-import Cuestionario from './Cuestionario.js';
-import {PreguntasContext} from "../Context/PreguntasContext.js";
 import personajes from '../JSON/Personajes.json';
 import SvgButton from './SvgButton.js';
 import DivPersonaje from './DivPersonaje.js';
