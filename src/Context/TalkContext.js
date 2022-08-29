@@ -7,41 +7,45 @@ export const TalkContext = createContext();
 
 export function TalkProvider(props){
     const [personaje, setPersonaje] = useState(personajesJSON[0]);
-    const [historial, setHistorial] = useState([]);
+    const [historial, setHistorial] = useState({list:[]});
 
     const addHistorial = (x) => {
-        let newHistorial = cloneArray(historial);
+        let newHistorial = historial.list;
         newHistorial.push(x);
-        setHistorial(historial);
+        setHistorial({list:newHistorial});
     }
 
     const deleteLast = () => {
-        let newHistorial =  cloneArray(historial);
-        newHistorial.slice(historial.length-1,1);
-        setHistorial(newHistorial);
+        let newHistorial =  historial.list;
+        newHistorial.slice(historial.list.length-1,1);
+        setHistorial({list:newHistorial});
     }
 
     const situacion = () => {
         let tags = [];
-        historial.map(
+        historial.list.map(
             (h) => {
-                h.efecto.map(
-                    (ef) => {
-                        tags.push(ef);
-                    }
-                );
+                if(Array.isArray(h.efectos)){
+                    h.efectos.map(
+                        (ef) => {
+                            tags.push(ef);
+                        }
+                    );
+                }
 
-                h.anula.map(
-                    (ef) => {
-                        tags.map(
-                            (tag, i) => {
-                                if(tag == ef){
-                                    tags.splice(i,1);
+                if(Array.isArray(h.anula)){
+                    h.anula.map(
+                        (ef) => {
+                            tags.map(
+                                (tag, i) => {
+                                    if(tag == ef){
+                                        tags.splice(i,1);
+                                    }
                                 }
-                            }
-                        );
-                    }
-                );
+                            );
+                        }
+                    );
+                }
             }
         );
 
@@ -55,30 +59,34 @@ export function TalkProvider(props){
             (suceso) => {
                 let si = true;
                 let no = true;
-                suceso.si.map(
-                    (si) => {
-                        let esta = false;
-                        tags.map(
-                            (tag) => {
-                                if(tag == si){
-                                    esta = true;
+                if(Array.isArray(suceso.si)){
+                    suceso.si.map(
+                        (si) => {
+                            let esta = false;
+                            tags.map(
+                                (tag) => {
+                                    if(tag == si){
+                                        esta = true;
+                                    }
                                 }
+                            );
+                            if(!(si && esta)){
+                                si = false;
                             }
-                        );
-                        if(!(si && esta)){
-                            si = false;
                         }
-                    }
-                );
+                    );
+                }
                 tags.map(
                     (tag) => {
-                        suceso.no.map(
-                            (no) => {
-                                if(no == tag){
-                                    no = false;
+                        if(Array.isArray(suceso.no)){
+                            suceso.no.map(
+                                (no) => {
+                                    if(no == tag){
+                                        no = false;
+                                    }
                                 }
-                            }
-                        )
+                            )
+                        }
                     }
                 );
                 if(si && no){
