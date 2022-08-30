@@ -1,6 +1,6 @@
-import {React, useContext, useState} from 'react';
-import { StyleSheet, Text, View, ScrollView } from 'react-native';
-import Svg, {Path} from 'react-native-svg';
+import { React, useContext } from 'react';
+import { Text, View } from 'react-native';
+import { Svg, Path } from 'react-native-svg';
 import cuestionarioJSON from "../JSON/Cuestionario.json";
 import { PreguntasContext } from '../Context/PreguntasContext';
 
@@ -10,7 +10,9 @@ export default function Pregunta(params) {
     const displayDropdown = () => {displayOrHide(params.i);};
     return (
         <View onClick={displayDropdown} style={styles.div}>
-            <Text style={styles.question}>{pregunta}</Text>
+            <View style={{width:"50%"}}>
+                <Text style={styles.question}>{pregunta}</Text>
+            </View>
             <View style={styles.boxSizer}>
                     <Text style={styles.answer}>{respuestas[params.i] == -1 ? undefinedAnswer : cuestionarioJSON[params.i].respuestas[respuestas[params.i]].respuesta}</Text>
                 <View style={styles.answerDiv}>
