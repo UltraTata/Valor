@@ -3,7 +3,7 @@ import { StyleSheet, Text, View, } from 'react-native';
 import TextButton from './TextButton.js';
 import { TalkContext } from '../Context/TalkContext.js';
 
-export default function DivSucesos(params) {
+export default function DivSucesos() {
     let context = useContext(TalkContext);
     return (
         <View style={styles.containter}>
@@ -11,7 +11,14 @@ export default function DivSucesos(params) {
             <View style={styles.sucesoDiv}>
                 {
                     context.sucesos().map(
-                        (suceso) => <View style={{margin:"1%"}}><TextButton color="#E6D72A">{suceso.nombre}</TextButton></View>
+                        (suceso) => 
+                            <View style={{margin:"1%"}}>
+                                <TextButton 
+                                    onClick={() => {context.addHistorial(suceso)}}
+                                    color="#E6D72A">
+                                        {suceso.nombre}
+                                </TextButton>
+                            </View>
                     )
                 }
             </View>

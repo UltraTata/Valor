@@ -1,7 +1,26 @@
 [
     {"nombre":"Conocí a una chica que me gusta", "efectos":["conocer"], "si":["varon"], "no":["conocer"]},
     {"nombre":"Conocí a un chico que me gusta", "efectos":["conocer"], "si":["mujer"], "no":["conocer"]},
-    {"nombre":"Fuimos al cine", "efectos":["cine 1","salida 1"], "si": ["conocer","hablar","invitar 1"]},
-    {"nombre":"Fuimos a la plaza", "efectos":["plaza 1","salida 1"], "si": ["conocer","hablar","invitar 1"]},
-    {"nombre":"Fuimos al restaurante", "efectos":["restaurante 1","salida 1"], "si": ["conocer","hablar","invitar 1"]}
+
+    {"nombre":"Hable con mi crush", "efectos":["hablar"], "si": ["conocer"], "no":["hablar"]},
+
+    {"nombre":"Quiero invitar a mi crush a algún sitio", "efectos":["invitar 1"], "si": ["conocer","hablar"], "no":["invitar 1","invitar 2"]},
+
+    {"nombre":"Fuimos al cine", "efectos":["cine 1","salida 1"], "si": ["conocer","hablar","invitar 1"], "no":["salida 1"]},
+    {"nombre":"Fuimos a la plaza", "efectos":["plaza 1","salida 1"], "si": ["conocer","hablar","invitar 1"], "no":["salida 1"]},
+    {"nombre":"Fuimos al restaurante", "efectos":["restaurante 1","salida 1"], "si": ["conocer","hablar","invitar 1"], "no":["salida 1"]},
+    {"nombre":"Invite a mi crush a otro lugar", "efectos":["salida 1"], "si": ["conocer","hablar","invitar 1"], "no":["salida 1"]},
+
+    {"nombre":"Quiero salir con mi crush de nuevo", "efectos":["invitar 2"], "si": ["conocer","hablar","invitar 1","salida 1"], "no":["invitar 2"]},
+
+    {"nombre":"Fuimos al cine de nuevo", "efectos":["cine 2","salida 2"], "si": ["conocer","hablar","invitar 1","cine 1","invitar 2"], "no":["salida 2"]},
+    {"nombre":"Fuimos a la plaza de nuevo", "efectos":["plaza 2","salida 2"], "si": ["conocer","hablar","invitar 1","plaza 1","invitar 2"], "no":["salida 2"]},
+    {"nombre":"Fuimos al restaurante de nuevo", "efectos":["restaurante 2","salida 2"], "si": ["conocer","hablar","invitar 1","restaurante 1","invitar 2"], "no":["salida 2"]},
+    {"nombre":"Fuimos al cine esta vez", "efectos":["cine 2","salida 2"], "si": ["conocer","hablar","invitar 1","invitar 2"], "no":["salida 2", "cine 1"]},
+    {"nombre":"Fuimos a la plaza esta vez", "efectos":["plaza 2","salida 2"], "si": ["conocer","hablar","invitar 1","invitar 2"], "no":["salida 2", "plaza 1"]},
+    {"nombre":"Fuimos al restaurante esta vez", "efectos":["restaurante 2","salida 2"], "si": ["conocer","hablar","invitar 1","invitar 2"], "no":["salida 2", "restaurante 1"]},
+
+    {"nombre":"Fuimos a otro sitio", "efecto":["salida 2"], "si":["conocer","hablar","invitar 1", "salida 1", "invitar 2"], "no":["salida 2"]},
+
+    {"nombre": "¡Victoria!", "si":["conocer","hablar","invitar 1", "salida 1", "invitar 2","salida 2"]}
 ]
