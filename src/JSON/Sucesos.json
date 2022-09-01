@@ -1,4 +1,7 @@
 [
+    {"nombre":"Soy varón", "efectos":["varon"], "no":["varon","mujer"]},
+    {"nombre":"Soy mujer", "efectos":["mujer"], "no":["varon","mujer"]},
+
     {"nombre":"Conocí a una chica que me gusta", "efectos":["conocer"], "si":["varon"], "no":["conocer"]},
     {"nombre":"Conocí a un chico que me gusta", "efectos":["conocer"], "si":["mujer"], "no":["conocer"]},
 
