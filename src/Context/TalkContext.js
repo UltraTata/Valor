@@ -61,11 +61,11 @@ export function TalkProvider(props){
                 let no = true;
                 if(Array.isArray(suceso.si)){
                     suceso.si.map(
-                        (si) => {
+                        (condicion) => {
                             let esta = false;
                             tags.map(
                                 (tag) => {
-                                    if(tag == si){
+                                    if(tag == condicion){
                                         esta = true;
                                     }
                                 }
@@ -80,8 +80,8 @@ export function TalkProvider(props){
                     (tag) => {
                         if(Array.isArray(suceso.no)){
                             suceso.no.map(
-                                (no) => {
-                                    if(no == tag){
+                                (condicion) => {
+                                    if(tag == condicion){
                                         no = false;
                                     }
                                 }
