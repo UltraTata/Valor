@@ -4,7 +4,6 @@
 
     {"nombre":"Conocí a una chica que me gusta en el boliche", "class": "como conocer", "efectos":["conocer"], "si":["varon"], "no":["conocer","temp"]},
     {"nombre":"Conocí a un chico que me  ", "class": "como conocer", "efectos":["conocer"], "si":["mujer"], "no":["conocer", "temp"]},
-    {"nombre":"👉👈 UwU 👉👈", "class": "none"},
     
     {"nombre":"Hable con mi crush", "efectos":["hablar"], "si": ["conocer"], "no":["hablar","temp"]},
 

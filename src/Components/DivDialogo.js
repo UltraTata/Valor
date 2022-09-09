@@ -11,13 +11,48 @@ export default function DivDialogo() {
     );
     let dialogo = {"texto":{},"prioridad":-1000};
     dialogo["texto"][context.personaje.alias] = context.personaje.defaultDialogue;
+    let tags = context.situacion();
     dialogosJSON.map(
         (d) => {
             classes.map(
                 (c) => {
                     if(d.class == c){
                         if(dialogo.prioridad < d.prioridad){
-                            dialogo = d;
+                            let si = true;
+                            let no = true;
+                            if(Array.isArray(d.si)){
+                                d.si.map(
+                                    (condicion) => {
+                                        let esta = false;
+                                        tags.map(
+                                            (tag) => {
+                                                if(tag == condicion){
+                                                    esta = true;
+                                                }
+                                            }
+                                        );
+                                        if(!(si && esta)){
+                                            si = false;
+                                        }
+                                    }
+                                );
+                            }
+                            tags.map(
+                                (tag) => {
+                                    if(Array.isArray(d.no)){
+                                        d.no.map(
+                                            (condicion) => {
+                                                if(tag == condicion){
+                                                    no = false;
+                                                }
+                                            }
+                                        )
+                                    }
+                                }
+                            );
+                            if(si && no){
+                                dialogo = d;
+                            }
                         }
                     }
                 }
