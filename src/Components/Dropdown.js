@@ -1,5 +1,5 @@
 import {React, useContext} from 'react';
-import { StyleSheet, Text, View, ScrollView, Image } from 'react-native';
+import { Text, View } from 'react-native';
 import { PreguntasContext } from '../Context/PreguntasContext';
 import cuestionarioJSON from "../JSON/Cuestionario.json";
 import Svg, {Path} from 'react-native-svg';
@@ -57,7 +57,7 @@ export default function Dropdown(props){
         </View>
     );
 }
-const styles = StyleSheet.create({
+const styles = {
     dropdown: {
         backgroundColor: "steelblue",
         position: "fixed",
@@ -85,4 +85,4 @@ const styles = StyleSheet.create({
         selfAlign: "end",
         margin: "1%"
     }
-})
+};

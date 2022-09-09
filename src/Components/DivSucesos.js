@@ -1,32 +1,36 @@
 import {React, useContext} from 'react';
-import { StyleSheet, Text, View, } from 'react-native';
+import { Text, View } from 'react-native';
 import TextButton from './TextButton.js';
 import { TalkContext } from '../Context/TalkContext.js';
 
 export default function DivSucesos() {
     let context = useContext(TalkContext);
-    return (
-        <View style={styles.containter}>
-            <Text style={styles.title}>¿Que paso? ¡Cuéntanos!</Text>
-            <View style={styles.sucesoDiv}>
-                {
-                    context.sucesos().map(
-                        (suceso) => 
-                            <View style={{margin:"1%"}}>
-                                <TextButton 
-                                    onClick={() => {context.addHistorial(suceso)}}
-                                    color="#E6D72A">
-                                        {suceso.nombre}
-                                </TextButton>
-                            </View>
-                    )
-                }
+    if(context.talkable){
+        return (
+            <View style={styles.containter}>
+                <Text style={styles.title}>¿Que paso? ¡Cuéntanos!</Text>
+                <View style={styles.sucesoDiv}>
+                    {
+                        context.sucesos().map(
+                            (suceso) => 
+                                <View style={{margin:"1%"}}>
+                                    <TextButton 
+                                        onClick={() => {context.addHistorial(suceso)}}
+                                        color="#E6D72A">
+                                            {suceso.nombre}
+                                    </TextButton>
+                                </View>
+                        )
+                    }
+                </View>
             </View>
-        </View>
-    );
+        );
+    }else{
+        return (<></>);
+    }
 }
 
-const styles = StyleSheet.create({
+const styles = {
     title: {
         fontSize: "20px",
         fontWeight: "bold",
@@ -47,4 +51,4 @@ const styles = StyleSheet.create({
         flexDirection: "row",
         margin:"3%"
     }
-});
+};

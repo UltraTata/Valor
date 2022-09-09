@@ -1,5 +1,5 @@
 import {React, useContext} from 'react';
-import { StyleSheet, View } from 'react-native';
+import { View } from 'react-native';
 import Pregunta from "./Pregunta.js";
 import TextButton from './TextButton.js';
 import cuestionarioJSON from "../JSON/Cuestionario.json";
@@ -38,7 +38,7 @@ export default function Cuestionario(params) {
     );
 }
 
-const styles = StyleSheet.create({
+const styles = {
     div: {
         backgroundColor: "#98DBC6",
         borderRadius: 8,
@@ -52,4 +52,4 @@ const styles = StyleSheet.create({
         fontSize: "20px",
         fontWeight: "bold"
     }
-});
+};

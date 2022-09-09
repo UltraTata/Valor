@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View, ScrollView, Image } from 'react-native';
+import { Text, View, Image } from 'react-native';
 import {fotosDePerfil} from "../img/cargarImg.js";
 import personajes from "../JSON/Personajes.json";
 
@@ -18,7 +18,7 @@ export default function DivAvatares() {
     );
 }
 
-const styles = StyleSheet.create({
+const styles = {
     div: {
         backgroundColor: "#98DBC6",
         borderRadius: 8,
@@ -36,4 +36,4 @@ const styles = StyleSheet.create({
     avatarText: {
         textAlign: "center"
     }
-});
+};

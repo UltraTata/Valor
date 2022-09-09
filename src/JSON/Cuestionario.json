@@ -15,15 +15,15 @@
         "respuestas": [
             {
                 "respuesta": "Voy a lugares comunes como bares, boliches, etc.",
-                "efectos": ["mainstream"]
+                "efectos": ["mainstream","socializar?"]
             }, 
             {
                 "respuesta": "Prefiero el aire libre",
-                "efectos": ["nature-friendly"]
+                "efectos": ["nature-friendly","socializar?"]
             }, 
             {
                 "respuesta": "¿Socializar?",
-                "efectos": ["introvertido"]
+                "efectos": ["introvertido","socializar?"]
             }
         ]
     },

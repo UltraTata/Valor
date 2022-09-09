@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { Text, View } from 'react-native';
 import IntroTexto from './IntroTexto.js';
 import DivAvatares from './DivAvatares.js';
 import Cuestionario from './Cuestionario.js';
@@ -20,7 +20,7 @@ export default function PantallaCuestionario({navigation}) {
   );
 }
 
-const styles = StyleSheet.create({
+const styles = {
   header: {
     flexDirection: "row",
     width: "94%",
@@ -36,4 +36,4 @@ const styles = StyleSheet.create({
   porFavor: {
     marginStart:"3%"
   }
-});
+};

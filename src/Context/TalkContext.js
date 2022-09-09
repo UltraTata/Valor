@@ -1,12 +1,12 @@
 import {createContext, React, useState} from 'react';
 import personajesJSON from "../JSON/Personajes.json";
 import sucesosJSON from "../JSON/Sucesos.json";
-import cloneArray from "./cloneArray.js";
 
 export const TalkContext = createContext();
 
 export function TalkProvider(props){
-    const [personaje, setPersonaje] = useState(personajesJSON[0]);
+    const [talkable, setTalkable] = useState(true);
+    const [personaje, setPersonaje] = useState(personajesJSON[2]);
     const [historial, setHistorial] = useState({list:[]});
 
     const addHistorial = (x) => {
@@ -103,6 +103,8 @@ export function TalkProvider(props){
             setPersonaje,
             historial,
             addHistorial,
+            talkable, 
+            setTalkable,
             deleteLast,
             situacion,
             sucesos

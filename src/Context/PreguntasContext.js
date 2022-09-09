@@ -1,10 +1,16 @@
 import {createContext, React, useState} from 'react';
 import cuestionarioJSON from "../JSON/Cuestionario.json";
-import cloneArray from "./cloneArray.js";
 
 export const PreguntasContext = createContext();
 
 export function PreguntasProvider(props){
+    const cloneArray = (array) => {
+        let newArray = [];
+        array.map(
+            (element) => {newArray.push(element)}
+        );
+        return newArray;
+    }
     const undefinedAnswer = "";
     const [dropdown, setDropdown] = useState(-1);
     const displayOrHide = function(i){

@@ -1,42 +1,30 @@
 [
     {
-        "nombre": "Abuelita",
-        "img": "abuela",
-        "desc": "señora mayor"
-    },
-    {
-        "nombre": "Trixie",
-        "img": "trixie",
-        "desc": "muchacha bella"
-    },
-    {
-        "nombre": "Conan",
-        "img": "conan",
-        "desc": "joven energetico"
-    },
-    {
-        "nombre": "Alexios I Komnenos",
-        "img": "alexios",
-        "desc": "sabio de la montaña"
-    },
-    {
         "nombre": "Takie Chuchy",
+        "alias": "takie",
         "img": "pava",
-        "desc": "Abuela pavo real (no tiene colores deslumbrantes porque es hembra)."
+        "desc": "Abuela pavo real (no tiene colores deslumbrantes porque es hembra).",
+        "defaultDialogue": "..."
     },
     {
         "nombre": "Tritzzy",
+        "alias": "tritz",
         "img": "serpiente",
-        "desc": "Jóven mujer serpiente. Parece sacada de un cuento de fantasía."
+        "desc": "Jóven mujer serpiente. Parece sacada de un cuento de fantasía.",
+        "defaultDialogue": "..."
     },
     {
         "nombre": "Don Archie",
+        "alias": "archie",
         "img": "delfin",
-        "desc": "Sabio delfín. Dicen que zurcó los siete mares con unas orcas amigas."
+        "desc": "Sabio delfín. Dicen que zurcó los siete mares con unas orcas amigas.",
+        "defaultDialogue": "..."
     },
     {
         "nombre": "Roaán",
+        "alias": "roaan",
         "img": "leon",
-        "desc": "Hombre león con una llamativa melena dorada."
+        "desc": "Hombre león con una llamativa melena dorada.",
+        "defaultDialogue": "..."
     }
 ]

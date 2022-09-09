@@ -1,0 +1,32 @@
+[
+    {
+        "texto": {
+            "takie": "Veo belleza. ¿Eres buen mozo o una bella damisela?",
+            "tritz": "",
+            "archie": "Saludos. Parezco Prof. Oak pero... ¿Eres chico o chica?",
+            "roaan": ""
+        },
+        "class": ["sexo"],
+        "prioridad": 1000
+    },
+    {
+        "texto": {
+            "takie": "Por curiosidad, ¿como tiendes a socializar?",
+            "tritz": "Por curiosidad, ¿como tiendes a socializar?",
+            "archie": "Por curiosidad, ¿como tiendes a socializar?",
+            "roaan": "Por curiosidad, ¿como tiendes a socializar?"
+        },
+        "class": ["socializar?"],
+        "prioridad": 900
+    },
+    {
+        "texto": {
+            "takie": "¿No conociste a tu media naranja? No pasa nada, el destino te hará conocerla... eventualmente...",
+            "tritz": "Hay algún chisme que pueda contar a mis amigas. Ehh... Digo... Que puedas contar a tu confidentisima amiga.",
+            "archie": "¿Y la mina para cuando?",
+            "roaan": "¿¡Y!? ¿Ya conociste a alguien?"
+        },
+        "class": ["como conocer"],
+        "prioridad": 500
+    }
+]
