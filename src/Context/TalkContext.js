@@ -9,16 +9,14 @@ export function TalkProvider(props){
     const [personaje, setPersonaje] = useState(personajesJSON[2]);
     
     const [historial, setHistorial] = useState({list:[]});
-
-    setTimeout(loadData,0);
-
+    
     let loadData = async () => {
-        let data = await localStorage.getItem('TASKS');
-        console.log(data)
+        let data = await localStorage.getItem('historial');
         if(data !== undefined){
             setHistorial(JSON.parse(data));
         }
     };
+
     let saveData = async () => {
         await localStorage.setItem('historial', JSON.stringify(historial));
     };
@@ -27,14 +25,14 @@ export function TalkProvider(props){
         let newHistorial = historial.list;
         newHistorial.push(x);
         setHistorial({list:newHistorial});
-        setTimeout(saveData,0);
+        saveData();
     }
 
     const deleteLast = () => {
         let newHistorial =  historial.list;
         newHistorial.slice(historial.list.length-1,1);
         setHistorial({list:newHistorial});
-        setTimeout(saveData,0);
+        saveData();
     }
 
     const situacion = () => {
@@ -115,6 +113,7 @@ export function TalkProvider(props){
 
     return (<TalkContext.Provider
         value={{
+            loadData,
             personaje,
             setPersonaje,
             historial,
