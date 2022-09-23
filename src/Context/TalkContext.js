@@ -32,7 +32,7 @@ export function TalkProvider(props){
 
     const deleteLast = () => {
         let newHistorial =  historial.list;
-        newHistorial.slice(historial.list.length-1,1);
+        newHistorial.splice(historial.list.length-1);
         setHistorial({list:newHistorial});
         saveData();
     }

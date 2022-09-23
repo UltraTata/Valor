@@ -1,32 +1,56 @@
 [
     {
         "texto": {
-            "takie": "Veo belleza. ¿Eres buen mozo o una bella damisela?",
-            "tritz": "",
-            "archie": "Saludos. Parezco Prof. Oak pero... ¿Eres chico o chica?",
-            "roaan": ""
-        },
-        "class": ["sexo"],
-        "prioridad": 1000
-    },
-    {
-        "texto": {
-            "takie": "Por curiosidad, ¿como tiendes a socializar?",
-            "tritz": "Por curiosidad, ¿como tiendes a socializar?",
-            "archie": "Por curiosidad, ¿como tiendes a socializar?",
-            "roaan": "Por curiosidad, ¿como tiendes a socializar?"
-        },
-        "class": ["socializar?"],
-        "prioridad": 900
-    },
-    {
-        "texto": {
             "takie": "¿No conociste a tu media naranja? No pasa nada, el destino te hará conocerla... eventualmente...",
             "tritz": "Hay algún chisme que pueda contar a mis amigas. Ehh... Digo... Que puedas contar a tu confidentisima amiga.",
             "archie": "¿Y la mina para cuando?",
             "roaan": "¿¡Y!? ¿Ya conociste a alguien?"
         },
         "class": ["como conocer"],
-        "prioridad": 500
+        "prioridad": 1000
+    },
+    {
+        "texto": {
+            "takie": "",
+            "tritz": "Dile que te quedaste con ganas de seguir bailando.",
+            "archie": "Jeje! Me hace acordar a mi juventud. Nunca entendí como funcionaba el tema de los bailes. Consúltale a Tritzzy, ella sabe.",
+            "roaan": "Supongo que le habrás pedido el teléfono o algo... ¿No?"
+        },
+        "class": ["hablar, primer paso"],
+        "si": ["del bar"],
+        "prioridad": 900
+    },
+    {
+        "texto": {
+            "takie": "Aprendizaje y amor, que dos cosas bellas. Fíjate de hacerle preguntas acerca del tema que estén estudiando seguido. Ella captará!",
+            "tritz": "Dile de tzzzzzzzzalir a bailar ¡Ah!",
+            "archie": "¡Concéntrate en tus estudios!",
+            "roaan": "Sentate al lado suyo... Hacele preguntas (aunque ya sepas la respuesta jeje)... Haz comentarios graciosos..."
+        },
+        "class": ["hablar, primer paso"],
+        "si": ["del curso"],
+        "prioridad": 901
+    },
+    {
+        "texto": {
+            "takie": "Asegúrate que sea quien dice ser. Hay cada malvado suelto.",
+            "tritz": "Preguntale cosas de su vida, puede que viva en otro sitio y tenga cosas interesantes que contar.",
+            "archie": "¡¡¡NOOOOOO!!! ¡Un peligro total! kuiiikikiki, ktktktkt (se comunica con otros delfines)",
+            "roaan": "¿Redes? ¡El amor es cara a cara! Dile de verse inmediatamente (es una orden)."
+        },
+        "class": ["hablar, primer paso"],
+        "si": ["de las redes"],
+        "prioridad": 902
+    },
+    {
+        "texto": {
+            "takie": "¡El destino!",
+            "tritz": "¿De que signo eres? Tal vezzzzzz tzean compatibles.",
+            "archie": "Amores de verano",
+            "roaan": "Búscala en redes sociales, quien sabe que puede pasar!"
+        },
+        "class": ["hablar, primer paso"],
+        "si": ["del destino"],
+        "prioridad": 903
     }
 ]
