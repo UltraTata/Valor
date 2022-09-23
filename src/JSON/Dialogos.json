@@ -9,6 +9,8 @@
         "class": ["como conocer"],
         "prioridad": 1000
     },
+
+
     {
         "texto": {
             "takie": "",
@@ -51,6 +53,6 @@
         },
         "class": ["hablar, primer paso"],
         "si": ["del destino"],
-        "prioridad": 903
+        "prioridad": 800
     }
 ]
