@@ -2,33 +2,33 @@
     {"nombre":"Soy varón", "class": "sexo", "efectos":["varon"], "no":["varon","mujer","temp"]},
     {"nombre":"Soy mujer", "class": "sexo", "efectos":["mujer"], "no":["varon","mujer","temp"]},
 
-    {"nombre":"Conocí a una chica que me gusta en el boliche", "class": "como conocer", "efectos":["conocer"], "si":["varon"], "no":["conocer","temp"]},
-    {"nombre":"Conocí a un chico que me  ", "class": "como conocer", "efectos":["conocer"], "si":["mujer"], "no":["conocer", "temp"]},
-    
-    {"nombre":"Hable con mi crush", "efectos":["hablar"], "si": ["conocer"], "no":["hablar","temp"]},
+    {"nombre":"Conocí a una persona que me gusta en un bar/boliche", "class": "como conocer", "efectos":["conocer","del boliche"], "no":["conocer","temp"]},
+    {"nombre":"Conocí a una persona que me gusta en un curso", "class": "como conocer", "efectos":["conocer","del curso"], "no":["conocer","temp"]},
+    {"nombre":"Conocí a una persona que me gusta en redes sociales", "class": "como conocer", "efectos":["conocer","de las redes"], "no":["conocer","temp"]},
+    {"nombre":"Conocí a una persona que me gusta por casualidad", "class": "como conocer", "efectos":["conocer","del destino"], "no":["conocer","temp"]},
 
-    {"nombre":"Quiero invitar a mi crush a algún sitio", "efectos":["invitar 1"], "si": ["conocer","hablar"], "no":["invitar 1","invitar 2","temp"]},
+    {"nombre":"Hable con mi crush", "class":"hablar, primer paso", "efectos":["hablar"], "si": ["conocer"], "no":["hablar","temp"]},
 
-    {"nombre":"Fuimos al cine", "efectos":["cine 1","salida 1"], "si": ["conocer","hablar","invitar 1"], "no":["salida 1","temp"]},
-    {"nombre":"Fuimos a la plaza", "efectos":["plaza 1","salida 1"], "si": ["conocer","hablar","invitar 1"], "no":["salida 1","temp"]},
-    {"nombre":"Fuimos al restaurante", "efectos":["restaurante 1","salida 1"], "si": ["conocer","hablar","invitar 1"], "no":["salida 1","temp"]},
-    {"nombre":"Fuimos con mi crush a otro lugar", "efectos":["salida 1"], "si": ["conocer","hablar","invitar 1"], "no":["salida 1","temp"]},
+    {"nombre":"La invité al cine", "efectos":["cine 1","inv 1"], "si": ["conocer","hablar"], "no":["inv 1","temp"]},
+    {"nombre":"La invité a la plaza", "efectos":["plaza 1","inv 1"], "si": ["conocer","hablar"], "no":["inv 1","temp"]},
+    {"nombre":"La invité al restaurante", "efectos":["restaurante 1","inv 1"], "si": ["conocer","hablar"], "no":["inv 1","temp"]},
+    {"nombre":"La invité a otro lugar", "efectos":["inv 1"], "si": ["conocer","hablar"], "no":["inv 1","temp"]},
 
-    {"nombre":"Quiero salir con mi crush de nuevo", "efectos":["invitar 2"], "si": ["conocer","hablar","invitar 1","salida 1"], "no":["invitar 2","temp"]},
+    {"nombre":"Ya salimos, fue genial", "efectos":["salida 1","salida 1 exito"], "si": ["conocer","hablar","inv 1"], "no":["salida 1","salida 1 exito","temp"]},
+    {"nombre":"Ya salimos, no estuvo tan bueno", "efectos":["salida 1","salida 1 fracaso"], "si": ["conocer","hablar","inv 1"], "no":["salida 1","temp"]},
+    {"nombre":"Al final se canceló", "anula":["inv 1","cine 1","plaza 1","restaurante 1"], "si": ["conocer","hablar","inv 1"], "no":["salida 1","temp"]},
 
-    {"nombre":"Fuimos al cine de nuevo", "efectos":["cine 2","salida 2"], "si": ["conocer","hablar","invitar 1","cine 1","invitar 2"], "no":["salida 2","temp"]},
-    {"nombre":"Fuimos a la plaza de nuevo", "efectos":["plaza 2","salida 2"], "si": ["conocer","hablar","invitar 1","plaza 1","invitar 2"], "no":["salida 2","temp"]},
-    {"nombre":"Fuimos al restaurante de nuevo", "efectos":["restaurante 2","salida 2"], "si": ["conocer","hablar","invitar 1","restaurante 1","invitar 2"], "no":["salida 2","temp"]},
-    {"nombre":"Fuimos al cine esta vez", "efectos":["cine 2","salida 2"], "si": ["conocer","hablar","invitar 1","invitar 2"], "no":["salida 2", "cine 1","temp"]},
-    {"nombre":"Fuimos a la plaza esta vez", "efectos":["plaza 2","salida 2"], "si": ["conocer","hablar","invitar 1","invitar 2"], "no":["salida 2", "plaza 1","temp"]},
-    {"nombre":"Fuimos al restaurante esta vez", "efectos":["restaurante 2","salida 2"], "si": ["conocer","hablar","invitar 1","invitar 2"], "no":["salida 2", "restaurante 1","temp"]},
+    {"nombre":"Quiero salir con mi crush de nuevo", "anula":["inv 1","salida 1"], "si": ["salida 1"], "no":["victoria","temp"]},
 
-    {"nombre":"Fuimos a otro sitio", "efecto":["salida 2"], "si":["conocer","hablar","invitar 1", "salida 1", "invitar 2"], "no":["salida 2","temp"]},
+    {"nombre":"¡Victoria!", "efectos":["Victoria"], "si": ["salida 1 exito","conocer","hablar","inv 1"], "no":["temp"]},
 
-    {"nombre": "¡Victoria!", "class": "Victoria", "si":["conocer","hablar","invitar 1", "salida 1", "invitar 2","salida 2"]},
-    {"nombre": "Me rechazó 😭", "class": "none", "efectos": ["temp - rechazo","temp"], "si":["conocer","hablar"], "no": ["temp"],"anula":["conocer","hablar","invitar 1", "salida 1", "invitar 2","salida 2"]},
-    {"nombre": "Cortamos 😭", "class": "none", "efectos": ["temp - cortamos","temp"], "si":["conocer","hablar","invitar 1", "salida 1", "invitar 2","salida 2"], "no":["temp"], "anula":["conocer","hablar","invitar 1", "salida 1", "invitar 2","salida 2"]},
-    
+    {"nombre": "Me rechazó 😭", "class": "none", "efectos": ["temp - rechazo","temp"], "si":["conocer","hablar"], "no": ["temp"],
+        "anula":["conocer","hablar","inv 1", "salida 1", "salida 1 fracaso", "salida 1 exito"]},
+
+    {"nombre": "Cortamos 😭", "class": "none", "efectos": ["temp - rechazo","temp"], "si":["salida 1"], "no": ["temp"],
+        "anula":["conocer","hablar","inv 1", "salida 1", "salida 1 fracaso", "salida 1 exito"]},
+        
     {"nombre": "K, ya me recupere 😁", "class": "f - rechazo", "anula": ["temp - rechazo","temp"], "si":["temp - rechazo"]},
     {"nombre": "K, ya me recupere 😁", "class": "f - cortamos", "anula": ["temp - cortamos","temp"], "si":["temp - cortamos"]}
+
 ]
