@@ -12,8 +12,10 @@ export function TalkProvider(props){
     
     let loadData = async () => {
         let data = await localStorage.getItem('historial');
-        if(data !== undefined){
-            setHistorial(JSON.parse(data));
+        if(typeof data == "object" && data !== null){
+            if(Array.isArray(data.list)){
+                setHistorial(JSON.parse(data));
+            }
         }
     };
 
