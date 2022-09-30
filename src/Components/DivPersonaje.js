@@ -2,14 +2,16 @@ import {React, useContext} from 'react';
 import { Text, View, Image } from 'react-native';
 import {fotosDePerfil} from "../img/cargarImg.js";
 import TextButton from './TextButton.js';
+import { RoutingContext } from '../Context/RoutingContext.js';
 import { TalkContext } from '../Context/TalkContext.js';
 
 export default function DivPersonaje(params) {
 
     const context = useContext(TalkContext);
+    const { setRoute } = useContext(RoutingContext);
     const elegir = () => {
         context.setPersonaje(params.personaje);
-        params.navigation.navigate("Estado");
+        setRoute("Estado");
     }
     return (
         <View style={styles.div}>

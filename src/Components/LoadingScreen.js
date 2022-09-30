@@ -1,20 +1,22 @@
 import { useContext, useEffect } from "react";
 import { View, Text, Image } from "react-native";
+import { RoutingContext } from "../Context/RoutingContext";
 import { TalkContext } from "../Context/TalkContext";
 import { fotosDePerfil } from "../img/cargarImg.js";
 
-export default function LoadingScreen(params){
+export default function LoadingScreen(){
     const {loadData} = useContext(TalkContext);
+    const {setRoute} = useContext(RoutingContext);
     useEffect(() => {
         const fetchData = async () => {
-          await loadData();
-          params.navigation.navigate("Elegir personaje");
+            await loadData();
+            setRoute("Personaje");
         };
-      
+
         fetchData()
-          // make sure to catch any error
-          .catch(console.error);;
-      }, [])
+            // make sure to catch any error
+            .catch(console.error);;
+        }, [])
 
     return (
         <View styles={styles.container}>
@@ -39,4 +41,4 @@ const styles = {
             aspectRatio: 1
         }
     }
-  };
+};
