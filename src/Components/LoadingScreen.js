@@ -3,12 +3,12 @@ import { View, Text, Image } from "react-native";
 import { TalkContext } from "../Context/TalkContext";
 import { fotosDePerfil } from "../img/cargarImg.js";
 
-export default function LoadingScreen(params){
-    const {loadData} = useContext(TalkContext);
+export default function LoadingScreen(){
+    const {loadData, setScreen} = useContext(TalkContext);
     useEffect(() => {
         const fetchData = async () => {
           await loadData();
-          params.navigation.navigate("Elegir personaje");
+          setScreen("Elegir personaje");
         };
       
         fetchData()

@@ -9,7 +9,7 @@ export default function DivPersonaje(params) {
     const context = useContext(TalkContext);
     const elegir = () => {
         context.setPersonaje(params.personaje);
-        params.navigation.navigate("Estado");
+        context.setScreen("Estado");
     }
     return (
         <View style={styles.div}>

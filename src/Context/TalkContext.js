@@ -1,17 +1,19 @@
 import {createContext, React, useState} from 'react';
 import personajesJSON from "../JSON/Personajes.json";
 import sucesosJSON from "../JSON/Sucesos.json";
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 export const TalkContext = createContext();
 
 export function TalkProvider(props){
     const [talkable, setTalkable] = useState(true);
     const [personaje, setPersonaje] = useState(personajesJSON[2]);
+    const [screen, setScreen] = useState("loading");
     
     const [historial, setHistorial] = useState({list:[]});
     
     let loadData = async () => {
-        let data = await localStorage.getItem('historial');
+        let data = await AsyncStorage.getItem('historial');
         if(typeof data == "object" && data !== null){
             if(Array.isArray(data.list)){
                 setHistorial(JSON.parse(data));
@@ -20,7 +22,7 @@ export function TalkProvider(props){
     };
 
     let saveData = async () => {
-        await localStorage.setItem('historial', JSON.stringify(historial));
+        await AsyncStorage.setItem('historial', JSON.stringify(historial));
     };
 
     const addHistorial = (x) => {
@@ -118,6 +120,8 @@ export function TalkProvider(props){
             loadData,
             personaje,
             setPersonaje,
+            screen,
+            setScreen,
             historial,
             addHistorial,
             talkable, 

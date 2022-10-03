@@ -5,7 +5,7 @@ import DivAvatares from './DivAvatares.js';
 import Cuestionario from './Cuestionario.js';
 
 
-export default function PantallaCuestionario({navigation}) {
+export default function PantallaCuestionario() {
   return (
     <View accessibilityRole="text" style={styles.container}>
       <View style={styles.header}>
@@ -15,7 +15,7 @@ export default function PantallaCuestionario({navigation}) {
       <DivAvatares/>
       <br></br>
       <Text style={styles.porFavor}>Por favor, responda estas preguntas:</Text>
-      <Cuestionario navigation={navigation}></Cuestionario>
+      <Cuestionario></Cuestionario>
     </View>
   );
 }
