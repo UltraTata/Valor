@@ -15,7 +15,7 @@ export default function DivPersonaje(params) {
         <View style={styles.div}>
             <View style={{flexDirection: "row", width:"100%"}}>
                 <Image style={styles.avatar} source={fotosDePerfil[params.personaje.img]}/>
-                <View style={{marginStart: "3%"}}>
+                <View style={styles.text}>
                     <Text style={styles.title}>{params.personaje.nombre}</Text>
                     <Text style={{marginBottom:"1%"}}>{params.personaje.desc}</Text>
                     <TextButton onClick={elegir} color="#fdcfdc">Elegir</TextButton>
@@ -33,8 +33,12 @@ const styles = {
         margin: "3%",
         padding: "3%"
     },
+    text: {
+        marginStart: "3%",
+        flex:1
+    },
     avatar: {
-        width: "20%",
+        height: "100%",
         aspectRatio: 1
     },
     title: {

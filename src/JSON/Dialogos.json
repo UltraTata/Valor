@@ -6,11 +6,19 @@
             "archie": "¿Y la mina para cuando?",
             "roaan": "¿¡Y!? ¿Ya conociste a alguien?"
         },
+        "class": ["antes conocer"],
+        "prioridad": 1100
+    },
+    {
+        "texto": {
+            "takie": "¿En donde?",
+            "tritz": "¿En donde?",
+            "archie": "¿En donde?",
+            "roaan": "¿¡En donde!?"
+        },
         "class": ["como conocer"],
         "prioridad": 1000
     },
-
-
     {
         "texto": {
             "takie": "",
@@ -46,6 +54,17 @@
     },
     {
         "texto": {
+            "takie": "Pregúntale cosas suyas para que se conozcan más.",
+            "tritz": "Hablale de ti, así se conocen más.",
+            "archie": "Hablen del amigo en común.",
+            "roaan": ""
+        },
+        "class": ["hablar, primer paso"],
+        "si": ["de la reunion"],
+        "prioridad": 903
+    },
+    {
+        "texto": {
             "takie": "¡El destino!",
             "tritz": "¿De que signo eres? Tal vezzzzzz tzean compatibles.",
             "archie": "Amores de verano",
@@ -53,6 +72,104 @@
         },
         "class": ["hablar, primer paso"],
         "si": ["del destino"],
+        "prioridad": 904
+    },
+
+    {
+        "texto": {
+            "takie": "Salgan a pasear",
+            "tritz": "Salgan a pasear así hablan un poco",
+            "archie": "Cine: un clásico",
+            "roaan": "Vayan a bailar"
+        },
+        "class": ["invitacion"],
+        "si": ["del bar"],
         "prioridad": 800
+    },
+    {
+        "texto": {
+            "takie": "Salgan a pasear, así hablan de algo que no sea de la clase",
+            "tritz": "Vayan al boliche azzzí tzaben como se baila ¡tzzzzzz!",
+            "archie": "Cine, siempre funciona",
+            "roaan": "Llevá libros y vayan a una plaza. Pueden leer algo juntos o pasear."
+        },
+        "class": ["invitacion"],
+        "si": ["del curso"],
+        "prioridad": 801
+    },
+    {
+        "texto": {
+            "takie": "Salgan a pasear, así se ven las caras",
+            "tritz": "Salgan a pasear, así se ven las caras",
+            "archie": "Salgan a comer algo, así se ven las caras",
+            "roaan": "Yo haría videollamada, así se ven las caras"
+        },
+        "class": ["invitacion"],
+        "si": ["de las redes"],
+        "prioridad": 802
+    },
+    {
+        "texto": {
+            "takie": "Salgan a pasear... Solitos... jiji...",
+            "tritz": "Una peli estaría bien",
+            "archie": "Cine: un clásico",
+            "roaan": "Como diría Don Archi, Cine: un clásico"
+        },
+        "class": ["invitacion"],
+        "si": ["de la reunion"],
+        "prioridad": 803
+    },
+    {
+        "texto": {
+            "takie": "Salgan a pasear a algún sitio lindo",
+            "tritz": "Vayan a ver una peli... o a bailar... no zzzzzé",
+            "archie": "Cine, siempre funciona",
+            "roaan": "Vayan a comer algo... o a ver una peli... no sé"
+        },
+        "class": ["invitacion"],
+        "si": ["del destino"],
+        "prioridad": 804
+    },
+
+    {
+        "texto": {
+            "takie": "Llévale flores, bombones o algún regalito tierno UwU",
+            "tritz": "Acuérdate de detzirle muchozzzzz complidozzzz tzzzzz",
+            "archie": "A veces, vale más escuchar una palabra que decir cien...",
+            "roaan": "Para romper el hielo puedes decir algo como '¿De que te gustaría hablar?'... Si, es medio bot pero tal vez funcione... No sé"
+        },
+        "class": ["invitacion (pre)"],
+        "prioridad": 775
+    },
+    {
+        "texto": {
+            "takie": "Y, ¿Como fue galaáaan?",
+            "tritz": "Tzzzzz",
+            "archie": "",
+            "roaan": "¿¡Y!?"
+        },
+        "class": ["cita"],
+        "prioridad": 750
+    },
+    {
+        "texto": {
+            "takie": "¿Como va la cosa?",
+            "tritz": "ZZzzzzegunda cita, dale! Zzzzzeguro que etzztan enamoradiots... jijiji",
+            "archie": "¿Como va la cosa?",
+            "roaan": "¡Bueno, dale! ¡Segunda cita! ¡Ya ya ya!"
+        },
+        "class": ["pre2"],
+        "prioridad": 725
+    },
+
+    {
+        "texto": {
+            "takie": "¡Muy bien, mozo!",
+            "tritz": "Tzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz",
+            "archie": "Excelente...",
+            "roaan": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+        },
+        "class": ["viva"],
+        "prioridad": 600
     }
 ]
