@@ -43,7 +43,6 @@ const styles = {
     },
     title: {
         fontWeight: "bold",
-        fontSize: "125%",
         marginBottom: "1%"
     }
 }

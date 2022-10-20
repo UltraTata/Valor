@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { Text, View, Image } from 'react-native';
+import { Text, View } from 'react-native';
 import personajes from '../JSON/Personajes.json';
 import SvgButton from './SvgButton.js';
 import DivPersonaje from './DivPersonaje.js';

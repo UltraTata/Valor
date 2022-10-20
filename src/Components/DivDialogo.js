@@ -77,7 +77,6 @@ export default function DivDialogo() {
 
 const styles = {
     title: {
-        fontSize: "20px",
         fontWeight: "bold",
         textAlign: "center"
     },

@@ -36,7 +36,6 @@ export default function DivSucesos() {
 
 const styles = {
     title: {
-        fontSize: "20px",
         fontWeight: "bold",
         textAlign: "center"
     },

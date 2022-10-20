@@ -25,8 +25,6 @@ const buttonStyles = (params) => {
         backgroundColor: params.color == undefined ? "#9DDCE0" : params.color,
         borderRadius: 8,
         justifyContent: "center",
-        alignItems: "center",
-        paddingVertical: "0.25em",
-        paddingHorizontal: "0.5em"
+        alignItems: "center"
     }
 };
