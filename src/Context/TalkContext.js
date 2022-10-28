@@ -14,6 +14,9 @@ export function TalkProvider(props){
     
     let loadData = async () => {
         let data = await AsyncStorage.getItem('historial');
+        if(!Array.isArray(data)){
+            data = localStorage.historial;
+        }
         if(typeof data == "object" && data !== null){
             if(Array.isArray(data.list)){
                 setHistorial(JSON.parse(data));
@@ -23,6 +26,7 @@ export function TalkProvider(props){
 
     let saveData = async () => {
         await AsyncStorage.setItem('historial', JSON.stringify(historial));
+        localStorage.historial = JSON.stringify(historial);
     };
 
     const addHistorial = (x) => {

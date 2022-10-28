@@ -3,7 +3,7 @@
         "texto": {
             "takie": "¿No conociste a tu media naranja? No pasa nada, el destino te hará conocerla... eventualmente...",
             "tritz": "Hay algún chisme que pueda contar a mis amigas. Ehh... Digo... Que puedas contar a tu confidentisima amiga.",
-            "archie": "¿Y la mina para cuando?",
+            "archie": "¿Y la parejita para cuando?",
             "roaan": "¿¡Y!? ¿Ya conociste a alguien?"
         },
         "class": ["antes conocer"],
@@ -68,7 +68,7 @@
             "takie": "¡El destino!",
             "tritz": "¿De que signo eres? Tal vezzzzzz tzean compatibles.",
             "archie": "Amores de verano",
-            "roaan": "Búscala en redes sociales, quien sabe que puede pasar!"
+            "roaan": "Búscale en redes sociales, quien sabe que puede pasar!"
         },
         "class": ["hablar, primer paso"],
         "si": ["del destino"],
