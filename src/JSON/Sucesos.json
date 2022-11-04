@@ -23,7 +23,7 @@
     {"nombre":"¡Victoria!", "class":"ya casi", "efectos":["Victoria"], "si": ["conocer","conocer (lugar)","hablar","inv 1","segunda"], "no":["salida 1","temp"]},
 
     {"nombre":"Ya salimos, fue genial", "class": "cita", "efectos":["salida 1","salida 1 exito"], "si": ["conocer","hablar","inv 1"], "no":["salida 1","salida 1 exito","temp"]},
-    {"nombre":"Ya salimos, no estuvo tan bueno", "class": "cita", "efectos":["salida 1","salida 1 fracaso"], "si": ["conocer","hablar","inv 1"], "no":["salida 1","temp","Victoria"]},
+    {"nombre":"Ya salimos, no estuvo tan bueno", "class": "cita", "anula":["inv 1"], "si": ["conocer","hablar","inv 1"], "no":["salida 1","temp","Victoria"]},
     {"nombre":"Al final se canceló", "class": "cita", "anula":["inv 1","inv pre"], "si": ["conocer","hablar","inv 1"], "no":["salida 1","temp","Victoria"]},
 
     {"nombre":"Quiero salir con mi crush de nuevo", "class":"pre2", "efectos":["segunda"], "anula":["inv 1","salida 1"], "si": ["salida 1"], "no":["victoria","temp"]},

@@ -14,12 +14,16 @@ export function TalkProvider(props){
     
     let loadData = async () => {
         let data = await AsyncStorage.getItem('historial');
-        if(!Array.isArray(data)){
+        console.log(data)
+        if(typeof data != "string"){
             data = localStorage.historial;
         }
-        if(typeof data == "object" && data !== null){
-            if(Array.isArray(data.list)){
+        if(typeof data == "string"){
+            try{
                 setHistorial(JSON.parse(data));
+            }catch(error){
+                console.warn("Error at loading AsyncStorage or LocalHost.");
+                console.error(error)
             }
         }
     };

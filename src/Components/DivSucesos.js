@@ -30,7 +30,14 @@ export default function DivSucesos() {
             </View>
         );
     }else{
-        return (<></>);
+        return (
+            <View style={styles.containter}>
+                <SvgButton color="#E6D72A" viewBox="-1 -1 18 18" onClick={() => {context.deleteLast()}}>
+                    M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z
+                </SvgButton>
+                <Text style={styles.title}>Intenta hablarle a otro personaje, {context.personaje.nombre} no sabe que decirte.</Text>
+            </View>
+        );
     }
 }
 
