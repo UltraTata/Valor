@@ -35,7 +35,7 @@
     {"nombre": "Me rechazó 😭", "class": "none", "efectos": ["temp - rechazo","temp"], "si":["conocer","hablar"], "no": ["temp","Victoria"],
         "anula":["conocer","hablar","inv 1", "salida 1", "salida 1 fracaso", "salida 1 exito","segunda","Victoria"]},
 
-    {"nombre": "Cortamos 😭", "class": "none", "efectos": ["temp - rechazo","temp"], "si":["salida 1"], "no": ["temp"],
+    {"nombre": "Cortamos 😭", "class": "none", "efectos": ["temp - rechazo","temp"], "si":["salida 1"], "no": ["temp","Victoria"],
         "anula":["conocer","hablar","inv 1", "salida 1", "salida 1 fracaso", "salida 1 exito","segunda","Victoria"]},
 
     {"nombre": "Cortamos 😭", "class": "none", "efectos": ["temp - rechazo","temp"], "si":["Victoria"], "no": ["temp"],

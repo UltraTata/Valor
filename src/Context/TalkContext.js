@@ -1,4 +1,4 @@
-import {createContext, React, useState} from 'react';
+import {createContext, React, useState, useEffect} from 'react';
 import personajesJSON from "../JSON/Personajes.json";
 import sucesosJSON from "../JSON/Sucesos.json";
 import AsyncStorage from '@react-native-async-storage/async-storage';
