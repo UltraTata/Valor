@@ -13,7 +13,7 @@ export default function DivPersonaje(params) {
     }
     return (
         <View style={styles.div}>
-            <View style={{flexDirection: "row", width:"100%"}}>
+            <View style={{flexDirection: "row", width:"100%", height:"100%"}}>
                 <Image style={styles.avatar} source={fotosDePerfil[params.personaje.img]}/>
                 <View style={styles.text}>
                     <Text style={styles.title}>{params.personaje.nombre}</Text>
@@ -30,6 +30,7 @@ const styles = {
         backgroundColor: "#98DBC6",
         borderRadius: 8,
         width:"94%",
+        height: "20%",
         margin: "3%",
         padding: "3%"
     },
